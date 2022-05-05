@@ -62,6 +62,7 @@ const Login = () => {
       {/* { condition ? true : false} */}
       {
         user.uid ? <button onClick={handleSignOut}>Sign out</button>
+        // user.email ? <button onClick={handleSignOut}>Sign out</button>
           :
           <>
             <button onClick={handleGoogleSignIn}>Google Sign In</button>
@@ -73,6 +74,7 @@ const Login = () => {
       <h2>Name: {user.displayName}</h2>
       <p>I know your email address: {user.email}</p>
       <img src={user.photoURL} alt="" />
+      <p>Uid: {user.uid}</p>
     </div>
   );
 }
